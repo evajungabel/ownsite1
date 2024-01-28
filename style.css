@@ -88,6 +88,7 @@ header.clicked {
     animation-play-state: paused;
     -webkit-animation: changeSeason 51s ease-in infinite;
     -webkit-animation-play-state: paused;
+    -webkit-animation-delay: 0.1s;
 }
 
 
