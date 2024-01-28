@@ -85,8 +85,8 @@ header.clicked {
     color: #DCF2F1;
     text-align: center;
     padding: 10px;
-    animation: changeSeason 51s ease-in infinite;
-    animation-play-state: paused;
+    -webkit-animation: changeSeason 51s ease-in infinite;
+    -webkit-animation-play-state: paused;
 }
 
 
@@ -100,8 +100,8 @@ nav.clicked {
 
 
 nav.clicked a, h2.clicked {
-    animation: changeSeasonText 51s ease-in infinite;
-    animation-play-state: paused;
+    -webkit-animation: changeSeasonText 51s ease-in infinite;
+    -webkit-animation-play-state: paused;
 }
 
 
@@ -133,7 +133,7 @@ footer.clicked {
 
 @-webkit-keyframes changeSeason {
     2% {
-        background-image: url("assets/backgrounds/springB4 F.jpeg");
+        -webkit-background-image: url("assets/backgrounds/springB4 F.jpeg");
         color: #3DB845;
     }
     35% {
