@@ -178,8 +178,8 @@
             button.classList.add("fade");
 
             about.forEach(function (element) {
-                element.classList.toggle('clicked');
                 element.style.animationPlayState = 'running';
+                element.classList.toggle('clicked');
             });
 
 
@@ -201,8 +201,8 @@
             icon.classList.add('fa-volume-up');
 
             about.forEach(function (element) {
-                element.classList.remove('clicked');
                 element.style.animationPlayState = 'paused';
+                element.classList.remove('clicked');
             });
 
 
