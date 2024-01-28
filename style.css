@@ -80,7 +80,7 @@ footer {
 }
 
 
-header.about {
+header.clicked {
     background-color: #365486;
     color: #DCF2F1;
     text-align: center;
@@ -90,7 +90,7 @@ header.about {
 }
 
 
-nav.about {
+nav.clicked {
     background-color: #0F1035;
     padding: 10px;
     color: white;
@@ -99,7 +99,7 @@ nav.about {
 }
 
 
-nav.about a, h2.about {
+nav.clicked a, h2.clicked {
     animation: changeSeasonText 51s ease-in infinite;
     animation-play-state: paused;
 }
@@ -121,7 +121,7 @@ nav.about a, h2.about {
 }
 
 
-footer.about {
+footer.clicked {
     background-color: #0F1035;
     color: white;
     text-align: center;
