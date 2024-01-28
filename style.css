@@ -88,6 +88,7 @@ header.clicked {
     animation-play-state: paused;
     -webkit-animation: changeSeason 51s ease-in infinite;
     -webkit-animation-play-state: paused;
+    -webkit-animation-delay: 1s;
 }
 
 
@@ -177,20 +178,20 @@ footer.clicked {
 
 @-webkit-keyframes changeSeason {
     2% {
-        background-image: url("assets/backgrounds/springB4 F.jpeg");
-        color: #3DB845;
+        -webkit-background-image: url("assets/backgrounds/springB4 F.jpeg");
+        -webkit-color: #3DB845;
     }
     35% {
-        background-image: url("assets/backgrounds/springB3 F.jpeg");
-        color: #E08220;
+        -webkit-background-image: url("assets/backgrounds/springB3 F.jpeg");
+        -webkit-color: #E08220;
     }
     60% {
-        background-image: url("assets/backgrounds/autumnB2 F.jpeg");
-        color: #804414;
+        -webkit-background-image: url("assets/backgrounds/autumnB2 F.jpeg");
+        -webkit-color: #804414;
     }
     85% {
-        background-image: url("./assets/backgrounds/winterB F.jpeg");
-        color: #80807D;
+        -webkit-background-image: url("./assets/backgrounds/winterB F.jpeg");
+        -webkit-color: #80807D;
     }
 }
 
