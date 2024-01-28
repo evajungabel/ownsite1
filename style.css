@@ -86,7 +86,7 @@ header.clicked {
     padding: 10px;
     animation: changeSeason 51s ease-in infinite;
     animation-play-state: paused;
-    -webkit-animation: changeSeason 51s 0.1s ease-in infinite;
+    -webkit-animation: changeSeason 51s ease-in infinite;
     -webkit-animation-play-state: paused;
 }
 
@@ -98,7 +98,7 @@ nav.clicked {
     color: white;
     animation: changeSeasonColor 51s ease-in infinite;
     animation-play-state: paused;
-    -webkit-animation: changeSeasonColor 51s 0.1s ease-in infinite;
+    -webkit-animation: changeSeasonColor 51s ease-in infinite;
     -webkit-animation-play-state: paused;
 }
 
@@ -106,7 +106,7 @@ nav.clicked {
 nav.clicked a, h2.clicked {
     animation: changeSeasonText 51s ease-in infinite;
     animation-play-state: paused;
-    -webkit-animation: changeSeasonText 51s 0.1s ease-in infinite;
+    -webkit-animation: changeSeasonText 51s ease-in infinite;
     -webkit-animation-play-state: paused;
 }
 
@@ -150,7 +150,7 @@ footer.clicked {
     clear: both;
     animation: changeSeason 51s ease-in infinite;
     animation-play-state: paused;
-    -webkit-animation: changeSeason 51s 0.1s ease-in infinite;
+    -webkit-animation: changeSeason 51s ease-in infinite;
     -webkit-animation-play-state: paused;
 }
 
@@ -216,7 +216,7 @@ footer.clicked {
 
 @-webkit-keyframes changeSeasonColor {
     2% {
-        -webkit-background-color: #00E74A;
+        background-color: #00E74A;
         color: #3DB845;
     }
     35% {
