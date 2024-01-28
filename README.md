@@ -1,4 +1,4 @@
 # ownsite1
-Playing and working with learning HTML, CSS and JavaScript.
+Playing and working with learning HTML, CSS, and JavaScript.
 
-And for now, the animations don't work well on mobile phones, but on desktops well.
+And for now, the animation and videos don't work well on some mobile phones.
