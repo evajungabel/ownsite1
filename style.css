@@ -153,7 +153,7 @@ footer.clicked {
     -webkit-animation-play-state: paused;
 }
 
-.about.paused {
+.about[paused] {
     animation-play-state: paused;
     -webkit-animation-play-state: paused;
     -moz-animation-play-state: paused;
@@ -161,7 +161,7 @@ footer.clicked {
 }
 
 
-.about.running {
+.about[running] {
     animation-play-state: running;
     -webkit-animation-play-state: running;
     -moz-animation-play-state: running;

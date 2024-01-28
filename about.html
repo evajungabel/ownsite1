@@ -180,7 +180,8 @@
 
             about.forEach(function (element) {
                 element.classList.add('clicked');
-                element.style.animationPlayState = "running";
+                element.setAttribute('running', '');
+                // element.style.animationPlayState = "running";
             });
 
             fallingLeaves.forEach(function (element) {
@@ -202,7 +203,8 @@
 
             about.forEach(function (element) {
                 element.classList.remove('clicked');
-                element.style.animationPlayState = "paused";
+                element.setAttribute('paused', '');
+                // element.style.animationPlayState = "paused";
             });
 
 
