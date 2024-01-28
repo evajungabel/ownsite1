@@ -61,7 +61,7 @@
 <!--</div>-->
 
 
-<header class="about">
+<header class="about" id="about">
     <h1>ABOUT</h1>
 </header>
 
@@ -169,7 +169,9 @@
     // imgS6.src = document.getElementById("snowflake6").src;
     // imgS7.src = document.getElementById("snowflake7").src;
 
-    button.addEventListener("click", () => {
+    const mytap = ( window.ontouchstart === null ) ? 'touchstart' : 'click';
+
+    button.addEventListener(mytap, () => {
         if (music.paused) {
             music.volume = 0.1;
             music.play();
@@ -179,7 +181,7 @@
 
             about.forEach(function (element) {
                 element.style.animationPlayState = 'running';
-                element.classList.toggle('clicked');
+                element.classList.add('clicked');
             });
 
 
@@ -218,6 +220,7 @@
 
             fourSeasonTree.style.display = "block";
         }
+
     });
 
 
