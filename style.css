@@ -79,19 +79,20 @@ footer {
     animation: changeSeason 0s infinite;
 }
 
-header.clicked {
+header.about {
     background-color: #365486;
     color: #DCF2F1;
     text-align: center;
     padding: 10px;
     animation: changeSeason 51s ease-in infinite;
-    animation-play-state: paused;
+    animation-play-state: paused, running;
     -webkit-animation: changeSeason 51s ease-in infinite;
+    -webkit-animation-play-state: paused, running;
 }
 
 
 
-nav.clicked {
+nav.about {
     background-color: #0F1035;
     padding: 10px;
     color: white;
@@ -102,7 +103,7 @@ nav.clicked {
 }
 
 
-nav.clicked a, h2.clicked {
+nav.about a, h2.about {
     animation: changeSeasonText 51s ease-in infinite;
     animation-play-state: paused;
     -webkit-animation: changeSeasonText 51s ease-in infinite;
@@ -141,7 +142,7 @@ nav.clicked a, h2.clicked {
 }
 
 
-footer.clicked {
+footer.about {
     background-color: #0F1035;
     color: white;
     text-align: center;
@@ -152,22 +153,6 @@ footer.clicked {
     -webkit-animation: changeSeason 51s ease-in infinite;
     -webkit-animation-play-state: paused;
 }
-
-.about[paused] {
-    animation-play-state: paused;
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    -o-animation-play-state: paused;
-}
-
-
-.about[running] {
-    animation-play-state: running;
-    -webkit-animation-play-state: running;
-    -moz-animation-play-state: running;
-    -o-animation-play-state: running;
-}
-
 
 @keyframes changeSeason {
     2% {
