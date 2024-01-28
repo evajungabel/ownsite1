@@ -86,7 +86,7 @@ header.clicked {
     padding: 10px;
     animation: changeSeason 51s ease-in infinite;
     animation-play-state: paused;
-    -webkit-animation: changeSeason 51s ease-in infinite;
+    -webkit-animation: changeSeason 51s 0.1s ease-in infinite;
     -webkit-animation-play-state: paused;
 }
 
