@@ -220,7 +220,7 @@
     function pauseAnimation() {
         if (!animationPaused) {
             about.forEach(function (element) {
-                element.style.animationPlayState = 'paused';
+                element.style.animation = "paused";
                 element.classList.remove('clicked');
             });
             animationPaused = true;
@@ -230,7 +230,7 @@
     function resumeAnimation() {
         if (animationPaused) {
             about.forEach(function (element) {
-                element.style.animationPlayState = 'running';
+                element.style.animation = "running";
                 element.classList.add('clicked');
             });
             animationPaused = false;

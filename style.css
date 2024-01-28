@@ -105,7 +105,7 @@ nav.clicked a, h2.clicked {
 }
 
 
-@keyframes changeSeasonText {
+@-webkit-keyframes changeSeasonText {
     2% {
         color: #3DB845;
     }
@@ -131,7 +131,7 @@ footer.clicked {
     animation-play-state: paused;
 }
 
-@keyframes changeSeason {
+@-webkit-keyframes changeSeason {
     2% {
         background-image: url("assets/backgrounds/springB4 F.jpeg");
         color: #3DB845;
