@@ -36,12 +36,14 @@ header {
     text-align: center;
     padding: 10px;
     animation: changeSeason 0s infinite;
+    animation-play-state: running;
 }
 
 nav {
     background-color: #0F1035;
     padding: 10px;
     animation: changeSeasonColor 0s infinite;
+    animation-play-state: running;
 }
 
 nav ul {
