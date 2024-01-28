@@ -152,7 +152,7 @@
     img6.src = document.getElementById("autumn6").src;
     img7.src = document.getElementById("autumn7").src;
 
-    let animationPaused = true;
+    // let animationPaused = true;
     // let fallingSnowflakes = document.querySelectorAll(".modal-contentW");
 
     // let imgS1 = document.getElementById("imgS1");
@@ -179,7 +179,11 @@
             icon.classList.add('fa-volume-mute');
             button.classList.add("fade");
 
-            resumeAnimation();
+            // resumeAnimation();
+            about.forEach(function (element) {
+                element.classList.add('clicked');
+                element.style.animationPlayState = "running";
+            });
 
 
             fallingLeaves.forEach(function (element) {
@@ -199,7 +203,11 @@
             icon.classList.remove('fa-volume-mute');
             icon.classList.add('fa-volume-up');
 
-            pauseAnimation();
+            // pauseAnimation();
+            about.forEach(function (element) {
+                element.classList.remove('clicked');
+                element.style.animationPlayState = "paused";
+            });
 
 
             fallingLeaves.forEach(function (element) {
@@ -217,25 +225,25 @@
 
     });
 
-    function pauseAnimation() {
-        if (!animationPaused) {
-            about.forEach(function (element) {
-                element.style.animation = "paused";
-                element.classList.remove('clicked');
-            });
-            animationPaused = true;
-        }
-    }
+    // function pauseAnimation() {
+    //     if (!animationPaused) {
+    //         about.forEach(function (element) {
+    //             element.style.animation = "paused";
+    //             element.classList.remove('clicked');
+    //         });
+    //         animationPaused = true;
+    //     }
+    // }
 
-    function resumeAnimation() {
-        if (animationPaused) {
-            about.forEach(function (element) {
-                element.style.animation = "running";
-                element.classList.add('clicked');
-            });
-            animationPaused = false;
-        }
-    }
+    // function resumeAnimation() {
+    //     if (animationPaused) {
+    //         about.forEach(function (element) {
+    //             element.style.animation = "running";
+    //             element.classList.add('clicked');
+    //         });
+    //         animationPaused = false;
+    //     }
+    // }
 
 
 </script>

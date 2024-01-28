@@ -157,6 +157,7 @@ footer.clicked {
 
 @keyframes changeSeason {
     2% {
+        background-image: url("assets/backgrounds/springB4 F.jpeg");
         -webkit-background-image: url("assets/backgrounds/springB4 F.jpeg");
         color: #3DB845;
     }
