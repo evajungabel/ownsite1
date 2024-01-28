@@ -152,6 +152,7 @@
     img6.src = document.getElementById("autumn6").src;
     img7.src = document.getElementById("autumn7").src;
 
+    let animationPaused = false;
     // let fallingSnowflakes = document.querySelectorAll(".modal-contentW");
 
     // let imgS1 = document.getElementById("imgS1");
@@ -169,7 +170,7 @@
     // imgS6.src = document.getElementById("snowflake6").src;
     // imgS7.src = document.getElementById("snowflake7").src;
 
-    const mytap = ( window.ontouchstart === null ) ? 'touchstart' : 'click';
+    const mytap = (window.ontouchstart === null) ? 'touchstart' : 'click';
 
     button.addEventListener(mytap, () => {
         if (music.paused) {
@@ -179,10 +180,7 @@
             icon.classList.add('fa-volume-mute');
             button.classList.add("fade");
 
-            about.forEach(function (element) {
-                element.style.animationPlayState = 'running';
-                element.classList.add('clicked');
-            });
+            resumeAnimation();
 
 
             fallingLeaves.forEach(function (element) {
@@ -202,10 +200,7 @@
             icon.classList.remove('fa-volume-mute');
             icon.classList.add('fa-volume-up');
 
-            about.forEach(function (element) {
-                element.style.animationPlayState = 'paused';
-                element.classList.remove('clicked');
-            });
+            pauseAnimation();
 
 
             fallingLeaves.forEach(function (element) {
@@ -222,6 +217,26 @@
         }
 
     });
+
+    function pauseAnimation() {
+        if (!animationPaused) {
+            about.forEach(function (element) {
+                element.style.animationPlayState = 'paused';
+                element.classList.remove('clicked');
+            });
+            animationPaused = true;
+        }
+    }
+
+    function resumeAnimation() {
+        if (animationPaused) {
+            about.forEach(function (element) {
+                element.style.animationPlayState = 'running';
+                element.classList.add('clicked');
+            });
+            animationPaused = false;
+        }
+    }
 
 
 </script>
