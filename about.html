@@ -170,9 +170,8 @@
     // imgS6.src = document.getElementById("snowflake6").src;
     // imgS7.src = document.getElementById("snowflake7").src;
 
-    const mytap = (window.ontouchstart === null) ? 'touchstart' : 'click';
 
-    button.addEventListener(mytap, () => {
+    button.addEventListener('click', () => {
         if (music.paused) {
             music.volume = 0.1;
             music.play();
