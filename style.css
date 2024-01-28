@@ -79,15 +79,17 @@ footer {
     animation: changeSeason 0s infinite;
 }
 
-
 header.clicked {
     background-color: #365486;
     color: #DCF2F1;
     text-align: center;
     padding: 10px;
+    animation: changeSeason 51s ease-in infinite;
+    animation-play-state: paused;
     -webkit-animation: changeSeason 51s ease-in infinite;
     -webkit-animation-play-state: paused;
 }
+
 
 
 nav.clicked {
@@ -96,12 +98,31 @@ nav.clicked {
     color: white;
     animation: changeSeasonColor 51s ease-in infinite;
     animation-play-state: paused;
+    -webkit-animation: changeSeasonColor 51s ease-in infinite;
+    -webkit-animation-play-state: paused;
 }
 
 
 nav.clicked a, h2.clicked {
+    animation: changeSeasonText 51s ease-in infinite;
+    animation-play-state: paused;
     -webkit-animation: changeSeasonText 51s ease-in infinite;
     -webkit-animation-play-state: paused;
+}
+
+@keyframes changeSeasonText {
+    2% {
+        color: #3DB845;
+    }
+    35% {
+        color: #E08220;
+    }
+    60% {
+        color: #804414;
+    }
+    85% {
+        color: #80807D;
+    }
 }
 
 
@@ -129,7 +150,30 @@ footer.clicked {
     clear: both;
     animation: changeSeason 51s ease-in infinite;
     animation-play-state: paused;
+    -webkit-animation: changeSeason 51s ease-in infinite;
+    -webkit-animation-play-state: paused;
 }
+
+
+@keyframes changeSeason {
+    2% {
+        -webkit-background-image: url("assets/backgrounds/springB4 F.jpeg");
+        color: #3DB845;
+    }
+    35% {
+        background-image: url("assets/backgrounds/springB3 F.jpeg");
+        color: #E08220;
+    }
+    60% {
+        background-image: url("assets/backgrounds/autumnB2 F.jpeg");
+        color: #804414;
+    }
+    85% {
+        background-image: url("./assets/backgrounds/winterB F.jpeg");
+        color: #80807D;
+    }
+}
+
 
 @-webkit-keyframes changeSeason {
     2% {
@@ -169,6 +213,26 @@ footer.clicked {
         color: #80807D;
     }
 }
+
+@-webkit-keyframes changeSeasonColor {
+    2% {
+        -webkit-background-color: #00E74A;
+        color: #3DB845;
+    }
+    35% {
+        background-color: #F7EF00;
+        color: #E08220;
+    }
+    60% {
+        background-color: #DD9821;
+        color: #804414;
+    }
+    85% {
+        background-color: #EDF2EF;
+        color: #80807D;
+    }
+}
+
 
 .extraction, .interest {
     display: flex;
