@@ -579,11 +579,13 @@ h1.smoke {
     letter-spacing: 0.1em;
 }
 
-span.smokeA, span.smokeB, span.smokeA.smokeS {
+
+span.smokeA, span.smokeB, span.smokeA.smokeS, .smokeS1, .smokeS2, .smokeS3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+
 
 span.smokeB > span, span.smokeS > span {
     flex-wrap: wrap;
