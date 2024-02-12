@@ -61,7 +61,7 @@
 <!--</div>-->
 
 
-<header class="about" id="about">
+<header class="about aboutNo" id="about">
     <h1>ABOUT</h1>
 </header>
 
@@ -179,6 +179,7 @@
             button.classList.add("fade");
 
             about.forEach(function (element) {
+                element.classList.remove('aboutNo');
                 element.classList.add('about');
                 element.style.animationPlayState = "running";
             });
@@ -202,6 +203,7 @@
 
             about.forEach(function (element) {
                 element.classList.remove('about');
+                element.classList.add('aboutNo');
                 element.style.animationPlayState = "paused";
             });
 

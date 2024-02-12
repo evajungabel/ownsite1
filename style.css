@@ -39,6 +39,15 @@ header {
     animation-play-state: running;
 }
 
+header.aboutNo {
+    background-color: #365486;
+    color: #DCF2F1;
+    text-align: center;
+    padding: 10px;
+    animation: changeSeason 0s infinite;
+    animation-play-state: running;
+}
+
 nav {
     background-color: #0F1035;
     padding: 10px;
