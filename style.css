@@ -35,8 +35,8 @@ header {
     color: #DCF2F1;
     text-align: center;
     padding: 10px;
-    animation: changeSeason 0s infinite;
-    animation-play-state: running;
+    /*animation: changeSeason 0s infinite;*/
+    /*animation-play-state: running;*/
 }
 
 nav {
