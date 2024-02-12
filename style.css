@@ -35,8 +35,8 @@ header {
     color: #DCF2F1;
     text-align: center;
     padding: 10px;
-    /*animation: changeSeason 0s infinite;*/
-    /*animation-play-state: running;*/
+    animation: changeSeason 0s infinite;
+    animation-play-state: running;
 }
 
 nav {
@@ -85,21 +85,9 @@ header.about {
     text-align: center;
     padding: 10px;
     animation: changeSeason 51s ease-in infinite;
-    -webkit-animation: changeSeason 51s ease-in infinite;
     animation-play-state: paused;
-    -webkit-animation-play-state: paused;
-    -webkit-animation-delay: 0.1s;
 }
 
-.about.paused {
-    animation-play-state: paused;
-    -webkit-animation-play-state: paused;
-}
-
-.about.running {
-    animation-play-state: running;
-    -webkit-animation-play-state: running;
-}
 
 nav.about {
     background-color: #0F1035;
@@ -107,16 +95,12 @@ nav.about {
     color: white;
     animation: changeSeasonColor 51s ease-in infinite;
     animation-play-state: paused;
-    -webkit-animation: changeSeasonColor 51s ease-in infinite;
-    -webkit-animation-play-state: paused;
 }
 
 
 nav.about a, h2.about {
     animation: changeSeasonText 51s ease-in infinite;
     animation-play-state: paused;
-    -webkit-animation: changeSeasonText 51s ease-in infinite;
-    -webkit-animation-play-state: paused;
 }
 
 @keyframes changeSeasonText {
@@ -135,21 +119,6 @@ nav.about a, h2.about {
 }
 
 
-@-webkit-keyframes changeSeasonText {
-    2% {
-        color: #3DB845;
-    }
-    35% {
-        color: #E08220;
-    }
-    60% {
-        color: #804414;
-    }
-    85% {
-        color: #80807D;
-    }
-}
-
 
 footer.about {
     background-color: #0F1035;
@@ -159,9 +128,8 @@ footer.about {
     clear: both;
     animation: changeSeason 51s ease-in infinite;
     animation-play-state: paused;
-    -webkit-animation: changeSeason 51s ease-in infinite;
-    -webkit-animation-play-state: paused;
 }
+
 
 @keyframes changeSeason {
     2% {
@@ -183,46 +151,7 @@ footer.about {
 }
 
 
-@-webkit-keyframes changeSeason {
-    2% {
-        background-image: url("assets/backgrounds/springB4 F.jpeg");
-        color: #3DB845;
-    }
-    35% {
-        background-image: url("assets/backgrounds/springB3 F.jpeg");
-        color: #E08220;
-    }
-    60% {
-        background-image: url("assets/backgrounds/autumnB2 F.jpeg");
-        color: #804414;
-    }
-    85% {
-        -webkit-background-image: url("./assets/backgrounds/winterB F.jpeg");
-        -webkit-color: #80807D;
-    }
-}
-
-
 @keyframes changeSeasonColor {
-    2% {
-        background-color: #00E74A;
-        color: #3DB845;
-    }
-    35% {
-        background-color: #F7EF00;
-        color: #E08220;
-    }
-    60% {
-        background-color: #DD9821;
-        color: #804414;
-    }
-    85% {
-        background-color: #EDF2EF;
-        color: #80807D;
-    }
-}
-
-@-webkit-keyframes changeSeasonColor {
     2% {
         background-color: #00E74A;
         color: #3DB845;
@@ -262,6 +191,7 @@ footer.about {
     height: auto;
     display: block;
 }
+
 
 .modal-content {
     mix-blend-mode: multiply;
