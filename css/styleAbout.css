@@ -1,0 +1,362 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, nav, main, footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin: 20px;
+    text-decoration: none;
+    text-align: justify;
+}
+
+
+header {
+    background-color: #365486;
+    color: #DCF2F1;
+    text-align: center;
+    padding: 10px;
+    animation: changeSeason 0s infinite;
+    animation-play-state: running;
+}
+
+
+nav {
+    background-color: #0F1035;
+    padding: 10px;
+    animation: changeSeasonColor 0s infinite;
+    animation-play-state: running;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+footer {
+    background-color: #0F1035;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    clear: both;
+    animation: changeSeason 0s infinite;
+}
+
+li {
+    margin: 10px;
+    text-decoration: none;
+    text-align: justify;
+}
+
+p.footnote {
+    margin: 20px;
+    font-size: 0.7em;
+}
+
+hr {
+    margin: 20px;
+}
+
+
+header.about {
+    background-color: #365486;
+    color: #DCF2F1;
+    text-align: center;
+    padding: 10px;
+    animation: changeSeason 51s ease-in infinite;
+    animation-play-state: paused;
+}
+
+
+nav.about {
+    background-color: #0F1035;
+    padding: 10px;
+    color: white;
+    animation: changeSeasonColor 51s ease-in infinite;
+    animation-play-state: paused;
+}
+
+
+nav.about a, h2.about {
+    animation: changeSeasonText 51s ease-in infinite;
+    animation-play-state: paused;
+}
+
+@keyframes changeSeasonText {
+    2% {
+        color: #3DB845;
+    }
+    35% {
+        color: #E08220;
+    }
+    60% {
+        color: #804414;
+    }
+    85% {
+        color: #80807D;
+    }
+}
+
+
+
+footer.about {
+    background-color: #0F1035;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    clear: both;
+    animation: changeSeason 51s ease-in infinite;
+    animation-play-state: paused;
+}
+
+
+@keyframes changeSeason {
+    2% {
+        background-image: url("../assets/backgrounds/springB4 F.jpeg");
+        color: #3DB845;
+    }
+    35% {
+        background-image: url("../assets/backgrounds/springB3 F.jpeg");
+        color: #E08220;
+    }
+    60% {
+        background-image: url("../assets/backgrounds/autumnB2 F.jpeg");
+        color: #804414;
+    }
+    85% {
+        background-image: url("../assets/backgrounds/winterB F.jpeg");
+        color: #80807D;
+    }
+}
+
+
+@keyframes changeSeasonColor {
+    2% {
+        background-color: #00E74A;
+        color: #3DB845;
+    }
+    35% {
+        background-color: #F7EF00;
+        color: #E08220;
+    }
+    60% {
+        background-color: #DD9821;
+        color: #804414;
+    }
+    85% {
+        background-color: #EDF2EF;
+        color: #80807D;
+    }
+}
+
+
+.extraction, .interest {
+    display: flex;
+    float: left;
+}
+
+
+
+.autumn, .trees, .snowflake {
+    mix-blend-mode: multiply;
+    cursor: pointer;
+    display: none;
+}
+
+.fourSeasonTree {
+    mix-blend-mode: multiply;
+    float: left;
+    width: 60%;
+    height: auto;
+    display: block;
+}
+
+
+.modal-content {
+    mix-blend-mode: multiply;
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 10vw;
+    animation: fall 51s infinite forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    opacity: 0;
+}
+
+@keyframes fall {
+    60% {
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+    70% {
+        transform: translateY(100vmin);
+        opacity: 0;
+    }
+}
+
+#img1 {
+    animation-delay: 20.5s;
+    left: 2vw;
+    position: absolute;
+}
+
+#img2 {
+    animation-delay: 20.1s;
+    left: 10vw;
+    top: 45vh;
+    position: absolute;
+}
+
+#img3 {
+    animation-delay: 20.2s;
+    left: 21vw;
+}
+
+#img4 {
+    animation-delay: 20.3s;
+    left: 35vw;
+    top: 25vh;
+}
+
+#img5 {
+    animation-delay: 20.5s;
+    left: 41vw;
+}
+
+#img6 {
+    animation-delay: 20.6s;
+    left: 63vw;
+    top: 15vh;
+}
+
+#img7 {
+    animation-delay: 20.8s;
+    left: 87vw;
+}
+
+
+
+
+
+#imgS1 {
+    /*animation-delay: 40.5s;*/
+    left: 2vw;
+    position: absolute;
+}
+
+#imgS2 {
+    /*animation-delay: 40.1s;*/
+    left: 10vw;
+    top: 45vh;
+    position: absolute;
+}
+
+#imgS3 {
+    animation-delay: 40.2s;
+    left: 21vw;
+}
+
+#imgS4 {
+    animation-delay: 40.3s;
+    left: 35vw;
+    top: 25vh;
+}
+
+#imgS5 {
+    animation-delay: 40.5s;
+    left: 41vw;
+}
+
+#imgS6 {
+    animation-delay: 40.6s;
+    left: 63vw;
+    top: 15vh;
+}
+
+#imgS7 {
+    animation-delay: 40.8s;
+    left: 87vw;
+}
+
+h2 {
+    color: #365486;
+    animation: changeSeasonText 0s infinite;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    animation: changeSeasonText 0s infinite;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+main.index {
+    display: grid;
+    text-align: center;
+}
+
+
+main.about p.s {
+    display: grid;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    align-items: center;
+}
+
+
+
+
+audio {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
+}
+
+button {
+    font-size: 16px;
+    color: #eee;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15%;
+    height: 10%;
+    padding: 15px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    background: rgba(115, 67, 167, 0.8);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+}
+
+button.fade:hover {
+    opacity: 0.8;
+}
+
+.fade {
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+}

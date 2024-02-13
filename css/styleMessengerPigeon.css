@@ -1,0 +1,28 @@
+.messengerPigeon {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "main" "main";
+    justify-items: center;
+    align-items: center;
+}
+
+img#pigeonMiddle {
+    mix-blend-mode: multiply;
+    height: 22vh;
+    width: 22vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: scaleUp 1.5s infinite alternate;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(2);
+    }
+}

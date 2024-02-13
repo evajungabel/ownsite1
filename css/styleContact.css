@@ -1,0 +1,65 @@
+section.forpigeon p {
+    float: left;
+
+}
+
+img {
+    float: left;
+}
+
+
+
+@keyframes pigeon {
+    0% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(5vw) rotate(360deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(5vw) rotate(0deg);
+    }
+}
+
+
+main.contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "main" "main";
+    align-items: center;
+    position: relative;
+}
+
+
+.text-overlay {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 22vh;
+    width: 42vw;
+    top: 20%;
+    left: 5%;
+    color: black;
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: left;
+}
+
+.pigeon {
+    mix-blend-mode: multiply;
+    width: 9vw;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 30vw;
+    animation: pigeon 2.5s linear infinite;
+    background-repeat: repeat;
+}
+
+
+video#smokeWhite {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
