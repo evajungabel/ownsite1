@@ -14,7 +14,7 @@ header, nav, main, footer {
 }
 
 
-header {
+header.aboutNo {
     background-color: #365486;
     color: #DCF2F1;
     text-align: center;
