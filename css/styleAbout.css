@@ -70,7 +70,7 @@ header.about {
     text-align: center;
     padding: 10px;
     animation: changeSeason 51s ease-in infinite;
-    animation-play-state: paused !important;
+    animation-play-state: paused;
 }
 
 
