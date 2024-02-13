@@ -180,9 +180,8 @@
             button.classList.add("fade");
 
             about.forEach(function (element) {
-                element.classList.remove('aboutNo');
-                element.classList.add('about');
                 element.style.animationPlayState = "running";
+                element.classList.add('about');
             });
 
             fallingLeaves.forEach(function (element) {
@@ -203,9 +202,8 @@
             icon.classList.add('fa-volume-up');
 
             about.forEach(function (element) {
-                element.classList.remove('about');
-                element.classList.add('aboutNo');
                 element.style.animationPlayState = "paused";
+                element.classList.remove('about');
             });
 
 
