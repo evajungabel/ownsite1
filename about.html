@@ -112,7 +112,7 @@
             wanting to figure
             out,
             but I reached the <a href="https://www.youtube.com/watch?v=wONu5j2-ruc" target="_blank">state</a> where I
-            let go and <a href="https://www.youtube.com/watch?v=QDYfEBY9NM4" target="_blank">let it be</a>.
+            let go and <a href="https://www.youtube.com/watch?v=QDYfEBY9NM4                    " target="_blank">let it be</a>.
         <p><a href="https://www.youtube.com/watch?v=Ue4mNQbj9V4" target="_blank">That's</a> the sad truth.</p>
         <p>And I try, and I try, and try, but I <a href="https://www.youtube.com/watch?v=QpV-VKu45nM" target="_blank">can't
             get no</a>...
@@ -133,6 +133,8 @@
     const icon = document.querySelector("#button > i");
     let music = document.querySelector("#mixSeasons");
     let about = document.querySelectorAll('.about');
+
+    let isPaused = false;
 
     let fourSeasonTree = document.getElementById("fourSeasonTree");
 
@@ -179,11 +181,13 @@
             icon.classList.add('fa-volume-mute');
             button.classList.add("fade");
 
-            about.forEach(function (element) {
-                element.classList.remove('aboutNo');
-                element.classList.add('about');
-                element.style.animationPlayState = "running";
-            });
+            toggleAnimation();
+
+            // about.forEach(function (element) {
+            //     element.classList.remove('aboutNo');
+            //     element.classList.add('about');
+            //     element.style.animationPlayState = "running";
+            // });
 
             fallingLeaves.forEach(function (element) {
                 element.style.visibility = "visible";
@@ -202,11 +206,13 @@
             icon.classList.remove('fa-volume-mute');
             icon.classList.add('fa-volume-up');
 
-            about.forEach(function (element) {
-                element.style.animationPlayState = "paused";
-                element.classList.remove('about');
-                element.classList.add('aboutNo');
-            });
+            toggleAnimation();
+
+            // about.forEach(function (element) {
+            //     element.style.animationPlayState = "paused";
+            //     element.classList.remove('about');
+            //     element.classList.add('aboutNo');
+            // });
 
 
             fallingLeaves.forEach(function (element) {
@@ -223,6 +229,21 @@
         }
 
     });
+
+    function toggleAnimation() {
+        about.forEach(function(element) {
+            if (isPaused) {
+                element.classList.remove('about');
+                element.style.animationPlayState = 'paused';
+            } else {
+                element.classList.add('about');
+                element.style.animationPlayState = 'running';
+                void element.offsetWidth;
+            }
+        });
+
+        isPaused = !isPaused;
+    }
 
 
 
