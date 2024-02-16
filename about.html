@@ -133,6 +133,7 @@
     const icon = document.querySelector("#button > i");
     let music = document.querySelector("#mixSeasons");
     let about = document.querySelectorAll('.about');
+    let aboutNo = document.querySelectorAll('.aboutNo');
 
     let isPaused = false;
 
@@ -181,13 +182,17 @@
             icon.classList.add('fa-volume-mute');
             button.classList.add("fade");
 
-            toggleAnimation();
+            aboutNo.forEach(function (element) {
+                element.style.animationPlayState = "paused";
+                element.classList.remove('aboutNo');
+                element.classList.add('about');
+            });
 
-            // about.forEach(function (element) {
-            //     element.classList.remove('aboutNo');
-            //     element.classList.add('about');
-            //     element.style.animationPlayState = "running";
-            // });
+            about.forEach(function (element) {
+                element.style.animationPlayState = "running";
+                element.classList.remove('aboutNo');
+                element.classList.add('about');
+            });
 
             fallingLeaves.forEach(function (element) {
                 element.style.visibility = "visible";
@@ -206,13 +211,17 @@
             icon.classList.remove('fa-volume-mute');
             icon.classList.add('fa-volume-up');
 
-            toggleAnimation();
+            aboutNo.forEach(function (element) {
+                element.style.animationPlayState = "paused";
+                element.classList.remove('about');
+                element.classList.add('aboutNo');
+            });
 
-            // about.forEach(function (element) {
-            //     element.style.animationPlayState = "paused";
-            //     element.classList.remove('about');
-            //     element.classList.add('aboutNo');
-            // });
+            about.forEach(function (element) {
+                element.style.animationPlayState = "paused";
+                element.classList.remove('about');
+                element.classList.add('aboutNo');
+            });
 
 
             fallingLeaves.forEach(function (element) {
@@ -229,21 +238,6 @@
         }
 
     });
-
-    function toggleAnimation() {
-        about.forEach(function(element) {
-            if (isPaused) {
-                element.classList.remove('about');
-                element.style.animationPlayState = 'paused';
-            } else {
-                element.classList.add('about');
-                element.style.animationPlayState = 'running';
-                void element.offsetWidth;
-            }
-        });
-
-        isPaused = !isPaused;
-    }
 
 
 </script>
