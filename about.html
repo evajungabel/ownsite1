@@ -184,14 +184,18 @@
 
             aboutNo.forEach(function (element) {
                 element.style.animationPlayState = "paused";
-                element.classList.remove('aboutNo');
-                element.classList.add('about');
+                setTimeout(() => {
+                    element.classList.remove('aboutNo');
+                    element.classList.add('about');
+                }, 50);
             });
 
             about.forEach(function (element) {
                 element.style.animationPlayState = "running";
-                element.classList.remove('aboutNo');
-                element.classList.add('about');
+                setTimeout(() => {
+                    element.classList.remove('aboutNo');
+                    element.classList.add('about');
+                }, 50);
             });
 
             fallingLeaves.forEach(function (element) {
@@ -213,14 +217,18 @@
 
             aboutNo.forEach(function (element) {
                 element.style.animationPlayState = "paused";
-                element.classList.remove('about');
-                element.classList.add('aboutNo');
+                setTimeout(() => {
+                    element.classList.remove('about');
+                    element.classList.add('aboutNo');
+                }, 50);
             });
 
             about.forEach(function (element) {
                 element.style.animationPlayState = "paused";
-                element.classList.remove('about');
-                element.classList.add('aboutNo');
+                setTimeout(() => {
+                    element.classList.remove('about');
+                    element.classList.add('aboutNo');
+                }, 50);
             });
 
 
