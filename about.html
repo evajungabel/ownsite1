@@ -212,6 +212,13 @@
             icon.classList.remove('fa-volume-mute');
             icon.classList.add('fa-volume-up');
 
+            about.forEach(function (element) {
+                element.style.animationPlayState = "paused";
+                setTimeout(() => {
+                    element.classList.add('aboutNo');
+                }, 50);
+            });
+
             aboutNo.forEach(function (element) {
                 element.style.animationPlayState = "paused";
                 setTimeout(() => {
@@ -219,12 +226,6 @@
                 }, 50);
             });
 
-            about.forEach(function (element) {
-                element.style.animationPlayState = "paused";
-                setTimeout(() => {
-                    element.classList.add('aboutNo');
-                }, 50);
-            });
 
 
             fallingLeaves.forEach(function (element) {
