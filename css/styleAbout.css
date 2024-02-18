@@ -284,7 +284,7 @@ div.section {
     mix-blend-mode: multiply;
     visibility: hidden;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     width: 10vw;
     animation: fall 51s infinite forwards;
     animation-iteration-count: infinite;
@@ -293,53 +293,48 @@ div.section {
 }
 
 @keyframes fall {
-    60% {
+    10% {
         transform: translateY(0vh);
         opacity: 1;
     }
-    70% {
+    25% {
         transform: translateY(100vmin);
         opacity: 0;
     }
 }
 
 #img1 {
-    animation-delay: 20.5s;
+    animation-delay: 27s;
     left: 2vw;
-    position: absolute;
 }
 
 #img2 {
-    animation-delay: 20.1s;
+    animation-delay: 26.1s;
     left: 10vw;
-    top: 45%;
-    position: absolute;
 }
 
 #img3 {
-    animation-delay: 20.2s;
+    animation-delay: 28s;
     left: 21vw;
 }
 
 #img4 {
-    animation-delay: 20.3s;
+    animation-delay: 29s;
     left: 35vw;
-    top: 25%;
 }
 
 #img5 {
-    animation-delay: 20.5s;
+    animation-delay: 27s;
     left: 41vw;
 }
 
 #img6 {
-    animation-delay: 20.6s;
+    animation-delay: 26s;
     left: 63vw;
-    top: 15%;
 }
 
 #img7 {
-    animation-delay: 20.8s;
+    animation-delay: 30s;
     left: 87vw;
 }
 
