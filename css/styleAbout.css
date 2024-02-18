@@ -294,7 +294,6 @@ div.section {
 
 @keyframes fall {
     10% {
-        transform: translateY(0vh);
         opacity: 1;
     }
     25% {
