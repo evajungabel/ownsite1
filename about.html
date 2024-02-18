@@ -46,26 +46,21 @@
 <img class="modal-content" id="img6" alt="autumn leaves">
 <img class="modal-content" id="img7" alt="autumn leaves">
 
-<!---->
-<!--<div class="falling-snowflakes" id="fallingSnowflakes">-->
-<!--    <img class="snowflake" id="snowflake1" src="assets/snowflakes/snowflake1.jpg" alt="falling snowflake"/>-->
-<!--    <img class="snowflake" id="snowflake2" src="assets/snowflakes/snowflake2.jpg" alt="falling snowflake"/>-->
-<!--    <img class="snowflake" id="snowflake3" src="assets/snowflakes/snowflake3.jpg" alt="falling snowflake"/>-->
-<!--    <img class="snowflake" id="snowflake4" src="assets/snowflakes/snowflake4.jpg" alt="falling snowflake"/>-->
-<!--    <img class="snowflake" id="snowflake5" src="assets/snowflakes/snowflake5.jpg" alt="falling snowflake"/>-->
-<!--    <img class="snowflake" id="snowflake6" src="assets/snowflakes/snowflake6.jpg" alt="falling snowflake"/>-->
-<!--    <img class="snowflake" id="snowflake7" src="assets/snowflakes/snowflake7.jpg" alt="falling snowflake"/>-->
-<!--</div>-->
+<img class="snowflake" id="snowflake1" src="assets/snowflakes/snowflake1.jpg" alt="falling snowflake"/>
+<img class="snowflake" id="snowflake2" src="assets/snowflakes/snowflake2.jpg" alt="falling snowflake"/>
+<img class="snowflake" id="snowflake3" src="assets/snowflakes/snowflake3.jpg" alt="falling snowflake"/>
+<img class="snowflake" id="snowflake4" src="assets/snowflakes/snowflake4.jpg" alt="falling snowflake"/>
+<img class="snowflake" id="snowflake5" src="assets/snowflakes/snowflake5.jpg" alt="falling snowflake"/>
+<img class="snowflake" id="snowflake6" src="assets/snowflakes/snowflake6.jpg" alt="falling snowflake"/>
+<img class="snowflake" id="snowflake7" src="assets/snowflakes/snowflake7.jpg" alt="falling snowflake"/>
 
-<!--<div class="modal-contentW">-->
-<!--    <img class="modal-contentW" id="imgS1" alt="falling snowflake">-->
-<!--    <img class="modal-contentW" id="imgS2" alt="falling snowflake">-->
-<!--    <img class="modal-contentW" id="imgS3" alt="falling snowflake">-->
-<!--    <img class="modal-contentW" id="imgS4" alt="falling snowflake">-->
-<!--    <img class="modal-contentW" id="imgS5" alt="falling snowflake">-->
-<!--    <img class="modal-contentW" id="imgS6" alt="falling snowflake">-->
-<!--    <img class="modal-contentW" id="imgS7" alt="falling snowflake">-->
-<!--</div>-->
+<img class="modal-contentW" id="imgS1" alt="falling snowflake">
+<img class="modal-contentW" id="imgS2" alt="falling snowflake">
+<img class="modal-contentW" id="imgS3" alt="falling snowflake">
+<img class="modal-contentW" id="imgS4" alt="falling snowflake">
+<img class="modal-contentW" id="imgS5" alt="falling snowflake">
+<img class="modal-contentW" id="imgS6" alt="falling snowflake">
+<img class="modal-contentW" id="imgS7" alt="falling snowflake">
 
 
 <header class="about aboutNo" id="about">
@@ -185,22 +180,22 @@
     img6.src = document.getElementById("autumn6").src;
     img7.src = document.getElementById("autumn7").src;
 
-    // let fallingSnowflakes = document.querySelectorAll(".modal-contentW");
+    let fallingSnowflakes = document.querySelectorAll(".modal-contentW");
 
-    // let imgS1 = document.getElementById("imgS1");
-    // let imgS2 = document.getElementById("imgS2");
-    // let imgS3 = document.getElementById("imgS3");
-    // let imgS4 = document.getElementById("imgS4");
-    // let imgS5 = document.getElementById("imgS5");
-    // let imgS6 = document.getElementById("imgS6");
-    // let imgS7 = document.getElementById("imgS7");
-    // imgS1.src = document.getElementById("snowflake1").src;
-    // imgS2.src = document.getElementById("snowflake2").src;
-    // imgS3.src = document.getElementById("snowflake3").src;
-    // imgS4.src = document.getElementById("snowflake4").src;
-    // imgS5.src = document.getElementById("snowflake5").src;
-    // imgS6.src = document.getElementById("snowflake6").src;
-    // imgS7.src = document.getElementById("snowflake7").src;
+    let imgS1 = document.getElementById("imgS1");
+    let imgS2 = document.getElementById("imgS2");
+    let imgS3 = document.getElementById("imgS3");
+    let imgS4 = document.getElementById("imgS4");
+    let imgS5 = document.getElementById("imgS5");
+    let imgS6 = document.getElementById("imgS6");
+    let imgS7 = document.getElementById("imgS7");
+    imgS1.src = document.getElementById("snowflake1").src;
+    imgS2.src = document.getElementById("snowflake2").src;
+    imgS3.src = document.getElementById("snowflake3").src;
+    imgS4.src = document.getElementById("snowflake4").src;
+    imgS5.src = document.getElementById("snowflake5").src;
+    imgS6.src = document.getElementById("snowflake6").src;
+    imgS7.src = document.getElementById("snowflake7").src;
 
     button.addEventListener('click', () => {
         if (music.paused) {
@@ -234,10 +229,10 @@
                 element.style.animationPlayState = 'running';
             });
 
-            // fallingSnowflakes.forEach(function (element) {
-            //     element.style.visibility = "visible";
-            //     element.style.animationPlayState = 'running';
-            // });
+            fallingSnowflakes.forEach(function (element) {
+                element.style.visibility = "visible";
+                element.style.animationPlayState = 'running';
+            });
 
             fourSeasonTree.style.display = "none";
 
@@ -271,14 +266,13 @@
                 element.style.animationPlayState = "paused";
             });
 
-            // fallingSnowflakes.forEach(function (element) {
-            //     element.style.visibility = "hidden";
-            //     element.style.animationPlayState = "paused";
-            // });
+            fallingSnowflakes.forEach(function (element) {
+                element.style.visibility = "hidden";
+                element.style.animationPlayState = "paused";
+            });
 
             fourSeasonTree.style.display = "block";
         }
-
     });
 
 
