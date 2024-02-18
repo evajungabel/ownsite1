@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-<!--    <link rel="stylesheet" href="./css/style.css">-->
+    <!--    <link rel="stylesheet" href="./css/style.css">-->
     <link rel="stylesheet" href="./css/styleAbout.css">
     <title>Éva Jungábel</title>
 </head>
@@ -20,6 +20,13 @@
     <i class="fas fa-volume-up"></i>
 </button>
 
+<div class="seasonTrees" id="seasonTrees">
+    <img class="seasonTrees" id="seasonTree1" src="./assets/trees/springTree.jpg" alt="spring tree"/>
+    <img class="seasonTrees" id="seasonTree2" src="./assets/trees/summerTree.jpg" alt="summer tree"/>
+    <img class="seasonTrees" id="seasonTree3" src="./assets/trees/autumnTree2.jpg" alt="autumn tree"/>
+    <img class="seasonTrees" id="seasonTree4" src="./assets/trees/winterTree.jpg" alt="winter tree"/>
+</div>
+
 
 <div class="falling-leaves" id="fallingLeaves">
     <img class="autumn" id="autumn1" src="./assets/autumn/a1.png" alt="flying leaf"/>
@@ -30,6 +37,7 @@
     <img class="autumn" id="autumn6" src="./assets/autumn/a6.png" alt="flying leaf"/>
     <img class="autumn" id="autumn7" src="./assets/autumn/a7.png" alt="flying leaf"/>
 </div>
+
 
 <div class="modal-content">
     <img class="modal-content" id="img1" alt="autumn leaves">
@@ -76,47 +84,62 @@
 </nav>
 
 <main>
-    <section class="extraction">
-        <div class="e">
+    <div>
+        <div class="section extraction">
             <h2 class="about aboutNo">Extraction</h2>
             <p>Well, just when I think I got me figured out, the
                 <a href="https://www.youtube.com/watch?v=D-tuOm7B-wI" target="_blank">season's</a>
                 already changing.*</p>
         </div>
 
-    </section>
+        <div class="section img">
+            <div class="interests">
+                <h2 class="about aboutNo">Interests </h2>
+                <p>I like lots of things, but there are <a href="https://www.youtube.com/watch?v=U9-Qz0Fix5A"
+                                                           target="_blank">three</a>
+                    things I like most:
+                </p>
+                <ul>
+                    <li>Mathematics</li>
+                    <li>Teaching</li>
+                    <li>Programming</li>
+                </ul>
+                <p> And music. So, four things.</p>
+                <p>And playing. So, five things.</p>
+            </div>
 
-
-    <section class="interest">
-        <div>
-            <h2 class="about aboutNo">Interest</h2>
-            <p>I like lots of things, but there are <a href="https://www.youtube.com/watch?v=U9-Qz0Fix5A"
-                                                       target="_blank">three</a>
-                things I like most: </p>
-            <ul>
-                <li>Mathematics</li>
-                <li>Teaching</li>
-                <li>Programming</li>
-            </ul>
-            <p> And music. So, four things.</p>
-            <p>And playing. So, five things.</p>
-        </div>
-        <div class="fourSeasonTree">
-            <img class="fourSeasonTree" id="fourSeasonTree" src="./assets/trees/FourSeasonTree.jpg"
+            <img class="fourSeasonTree" id="fourSeasonTree"
+                 src="./assets/trees/FourSeasonTree.jpg"
                  alt="four season tree"/>
+
+            <img class="modal-trees" id="tree1" alt="spring tree">
+            <img class="modal-trees" id="tree2" alt="summer tree">
+            <img class="modal-trees" id="tree3" alt="autumn tree">
+            <img class="modal-trees" id="tree4" alt="winter tree">
+
+
         </div>
-    </section>
-    <section>
-        <h2 class="about aboutNo">Experiences</h2>
-        <p>I was learning and doing and just thinking and thinking and just thinking and thinking and just thinking,
-            wanting to figure
-            out,
-            but I reached the <a href="https://www.youtube.com/watch?v=wONu5j2-ruc" target="_blank">state</a> where I
-            let go and <a href="https://www.youtube.com/watch?v=QDYfEBY9NM4                    " target="_blank">let it be</a>.
-        <p><a href="https://www.youtube.com/watch?v=Ue4mNQbj9V4" target="_blank">That's</a> the sad truth.</p>
-        <p>And I try, and I try, and try, but I <a href="https://www.youtube.com/watch?v=QpV-VKu45nM" target="_blank">can't
-            get no</a>...
-    </section>
+        <div class="section">
+            <h2 class="about aboutNo">Experiences</h2>
+            <p>I was learning and doing and just thinking and thinking and just thinking and thinking and just
+                thinking,
+                wanting to figure
+                out,
+                but I reached the <a href="https://www.youtube.com/watch?v=wONu5j2-ruc" target="_blank">state</a>
+                where
+                I
+                let go and <a href="https://www.youtube.com/watch?v=QDYfEBY9NM4                    "
+                              target="_blank">let
+                    it
+                    be</a>.
+            <p><a href="https://www.youtube.com/watch?v=Ue4mNQbj9V4" target="_blank">That's</a> the sad truth.</p>
+            <p>And I try, and I try, and try, but I <a href="https://www.youtube.com/watch?v=QpV-VKu45nM"
+                                                       target="_blank">can't
+                get no</a>...
+        </div>
+    </div>
+
+
 </main>
 
 <hr class="footnote">
@@ -135,11 +158,19 @@
     let about = document.querySelectorAll('.about');
     let aboutNo = document.querySelectorAll('.aboutNo');
 
-    let isPaused = false;
-
     let fourSeasonTree = document.getElementById("fourSeasonTree");
+    let seasonTrees = document.querySelectorAll(".modal-trees");
 
-    let fallingLeaves = document.querySelectorAll(".modal-content");
+    let fallingLeaves = document.querySelectorAll('.modal-content');
+
+    let tree1 = document.getElementById("tree1");
+    let tree2 = document.getElementById("tree2");
+    let tree3 = document.getElementById("tree3");
+    let tree4 = document.getElementById("tree4");
+    tree1.src = document.getElementById("seasonTree1").src;
+    tree2.src = document.getElementById("seasonTree2").src;
+    tree3.src = document.getElementById("seasonTree3").src;
+    tree4.src = document.getElementById("seasonTree4").src;
 
     let img1 = document.getElementById("img1");
     let img2 = document.getElementById("img2");
@@ -182,7 +213,7 @@
             button.classList.add("fade");
 
             aboutNo.forEach(function (element) {
-                element.style.animationPlayState = "paused";
+                // element.style.animationPlayState = "paused";
                 setTimeout(() => {
                     element.classList.remove('aboutNo');
                 }, 50);
@@ -193,6 +224,11 @@
                 setTimeout(() => {
                     element.classList.add('about');
                 }, 50);
+            });
+
+            seasonTrees.forEach(function (element) {
+                element.style.visibility = "visible";
+                element.style.animationPlayState = 'running';
             });
 
             fallingLeaves.forEach(function (element) {
@@ -215,18 +251,22 @@
             about.forEach(function (element) {
                 element.style.animationPlayState = "paused";
                 setTimeout(() => {
-                    element.classList.add('aboutNo');
-                }, 50);
-            });
-
-            aboutNo.forEach(function (element) {
-                element.style.animationPlayState = "paused";
-                setTimeout(() => {
                     element.classList.remove('about');
                 }, 50);
             });
 
+            aboutNo.forEach(function (element) {
+                // element.style.animationPlayState = "running";
+                setTimeout(() => {
+                    element.classList.add('aboutNo');
+                }, 50);
+            });
 
+
+            seasonTrees.forEach(function (element) {
+                element.style.visibility = "hidden";
+                element.style.animationPlayState = "paused";
+            });
 
             fallingLeaves.forEach(function (element) {
                 element.style.visibility = "hidden";

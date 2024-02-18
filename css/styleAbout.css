@@ -1,8 +1,38 @@
+audio {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+main.index {
+    display: grid;
+    text-align: center;
+}
+
+
+main.about p.s {
+    display: grid;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    align-items: center;
+}
+
 
 header, nav, main, footer {
     display: grid;
@@ -12,7 +42,6 @@ header, nav, main, footer {
     text-decoration: none;
     text-align: justify;
 }
-
 
 
 header.aboutNo {
@@ -47,6 +76,7 @@ nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    animation: changeSeasonText 0s infinite;
 }
 
 a:link {
@@ -131,7 +161,6 @@ nav.about a, h2.about {
 }
 
 
-
 footer.about {
     background-color: #0F1035;
     color: white;
@@ -183,27 +212,73 @@ footer.about {
 }
 
 
-.extraction, .interest {
+div.img {
     display: flex;
-    float: left;
+    align-items: center;
+}
+
+div.section {
+    padding-bottom: 2%;
 }
 
 
+.fourSeasonTree {
+    position: absolute;
+    left: 60%;
+    mix-blend-mode: multiply;
+    width: 25%;
+    height: auto;
+    vertical-align: text-top;
+}
 
-.autumn, .trees, .snowflake {
+
+.autumn, .seasonTrees, .snowflake {
     mix-blend-mode: multiply;
     cursor: pointer;
     display: none;
 }
 
-.fourSeasonTree {
+
+.modal-trees {
     mix-blend-mode: multiply;
-    float: left;
-    width: 60%;
+    position: absolute;
+    left: 60%;
+    float: right;
+    width: 20%;
     height: auto;
-    display: block;
+    z-index: 1;
+    vertical-align: text-top;
+    visibility: hidden;
+    animation: changeTree 51s infinite forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    opacity: 0;
 }
 
+@keyframes changeTree {
+    10% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 0;
+    }
+}
+
+#tree1 {
+    animation-delay: 0s;
+}
+
+#tree2 {
+    animation-delay: 13s;
+}
+
+#tree3 {
+    animation-delay: 26s;
+}
+
+#tree4 {
+    animation-delay: 39s;
+}
 
 .modal-content {
     mix-blend-mode: multiply;
@@ -237,7 +312,7 @@ footer.about {
 #img2 {
     animation-delay: 20.1s;
     left: 10vw;
-    top: 45vh;
+    top: 45%;
     position: absolute;
 }
 
@@ -249,7 +324,7 @@ footer.about {
 #img4 {
     animation-delay: 20.3s;
     left: 35vw;
-    top: 25vh;
+    top: 25%;
 }
 
 #img5 {
@@ -260,16 +335,13 @@ footer.about {
 #img6 {
     animation-delay: 20.6s;
     left: 63vw;
-    top: 15vh;
+    top: 15%;
 }
 
 #img7 {
     animation-delay: 20.8s;
     left: 87vw;
 }
-
-
-
 
 
 #imgS1 {
@@ -281,7 +353,7 @@ footer.about {
 #imgS2 {
     /*animation-delay: 40.1s;*/
     left: 10vw;
-    top: 45vh;
+    top: 45%;
     position: absolute;
 }
 
@@ -293,7 +365,7 @@ footer.about {
 #imgS4 {
     animation-delay: 40.3s;
     left: 35vw;
-    top: 25vh;
+    top: 25%;
 }
 
 #imgS5 {
@@ -304,7 +376,7 @@ footer.about {
 #imgS6 {
     animation-delay: 40.6s;
     left: 63vw;
-    top: 15vh;
+    top: 15%;
 }
 
 #imgS7 {
@@ -317,45 +389,6 @@ h2 {
     animation: changeSeasonText 0s infinite;
 }
 
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    animation: changeSeasonText 0s infinite;
-}
-
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-}
-
-main.index {
-    display: grid;
-    text-align: center;
-}
-
-
-main.about p.s {
-    display: grid;
-    text-align: center;
-}
-
-section {
-    padding: 20px;
-    align-items: center;
-}
-
-
-
-
-audio {
-    width: 100%;
-    max-width: 400px;
-    margin: 20px auto;
-    display: block;
-}
 
 button {
     font-size: 16px;
@@ -375,6 +408,7 @@ button {
     opacity: 0.8;
     cursor: pointer;
     transition: all 0.4s ease-out;
+    z-index: 1;
 }
 
 button.fade:hover {
