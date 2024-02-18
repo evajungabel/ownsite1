@@ -232,7 +232,7 @@ div.section {
 }
 
 
-.autumn, .seasonTrees, .snowflake {
+.autumn, .seasonTrees, .snowflake, .santa {
     mix-blend-mode: multiply;
     cursor: pointer;
     display: none;
@@ -370,6 +370,43 @@ div.section {
 #imgS7 {
     animation-delay: 44s;
     left: 87vw;
+}
+
+
+.modal-contentSanta {
+    mix-blend-mode: multiply;
+    visibility: hidden;
+    position: absolute;
+    width: 10vw;
+    animation: movingSanta 51s alternate infinite ease-in-out;;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+@keyframes movingSanta {
+    75% {
+        to {
+            transform: translatey(100px);
+            opacity: 1;
+        }
+        opacity: 1;
+    }
+}
+
+div.modal-contentSanta {
+    position: absolute;
+    left: 0;
+    width: 10%;
+    animation: translate 15s infinite linear;
+}
+
+@keyframes translate {
+    to {
+        transform: translatex(900%);
+        opacity: 1;
+    }
 }
 
 h2 {

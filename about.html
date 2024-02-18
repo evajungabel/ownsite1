@@ -46,13 +46,15 @@
 <img class="modal-content" id="img6" alt="autumn leaves">
 <img class="modal-content" id="img7" alt="autumn leaves">
 
-<img class="snowflake" id="snowflake1" src="assets/snowflakes/snowflake1.jpg" alt="falling snowflake"/>
-<img class="snowflake" id="snowflake2" src="assets/snowflakes/snowflake2.jpg" alt="falling snowflake"/>
-<img class="snowflake" id="snowflake3" src="assets/snowflakes/snowflake3.jpg" alt="falling snowflake"/>
-<img class="snowflake" id="snowflake4" src="assets/snowflakes/snowflake4.jpg" alt="falling snowflake"/>
-<img class="snowflake" id="snowflake5" src="assets/snowflakes/snowflake5.jpg" alt="falling snowflake"/>
-<img class="snowflake" id="snowflake6" src="assets/snowflakes/snowflake6.jpg" alt="falling snowflake"/>
-<img class="snowflake" id="snowflake7" src="assets/snowflakes/snowflake7.jpg" alt="falling snowflake"/>
+<img class="snowflake" id="snowflake1" src="./assets/snowflakes&winter/snowflake1.jpg" alt="falling snowflake"/>
+<img class="snowflake" id="snowflake2" src="./assets/snowflakes&winter/snowflake2.jpg" alt="falling snowflake"/>
+<img class="snowflake" id="snowflake3" src="./assets/snowflakes&winter/snowflake3.jpg" alt="falling snowflake"/>
+<img class="snowflake" id="snowflake4" src="./assets/snowflakes&winter/snowflake4.jpg" alt="falling snowflake"/>
+<img class="snowflake" id="snowflake5" src="./assets/snowflakes&winter/snowflake5.jpg" alt="falling snowflake"/>
+<img class="snowflake" id="snowflake6" src="./assets/snowflakes&winter/snowflake6.jpg" alt="falling snowflake"/>
+<img class="snowflake" id="snowflake7" src="./assets/snowflakes&winter/snowflake7.jpg" alt="falling snowflake"/>
+
+<img class="santa" id="santa" src="./assets/snowflakes&winter/SantaClaus.jpg" alt="Santa Claus"/>
 
 <img class="modal-contentW" id="imgS1" alt="falling snowflake">
 <img class="modal-contentW" id="imgS2" alt="falling snowflake">
@@ -61,6 +63,10 @@
 <img class="modal-contentW" id="imgS5" alt="falling snowflake">
 <img class="modal-contentW" id="imgS6" alt="falling snowflake">
 <img class="modal-contentW" id="imgS7" alt="falling snowflake">
+
+<div class="modal-contentSanta">
+    <img class="modal-contentSanta" id="imgSanta" alt="Santa Claus">
+</div>
 
 
 <header class="about aboutNo" id="about">
@@ -197,6 +203,11 @@
     imgS6.src = document.getElementById("snowflake6").src;
     imgS7.src = document.getElementById("snowflake7").src;
 
+    let santa = document.querySelector(".modal-contentSanta");
+    let imgSanta = document.getElementById("imgSanta");
+    imgSanta.src = document.getElementById("santa").src;
+
+
     button.addEventListener('click', () => {
         if (music.paused) {
             music.volume = 0.1;
@@ -204,13 +215,6 @@
             icon.classList.remove('fa-volume-up');
             icon.classList.add('fa-volume-mute');
             button.classList.add("fade");
-
-            aboutNo.forEach(function (element) {
-                // element.style.animationPlayState = "paused";
-                setTimeout(() => {
-                    element.classList.remove('aboutNo');
-                }, 50);
-            });
 
             about.forEach(function (element) {
                 element.style.animationPlayState = "running";
@@ -234,6 +238,10 @@
                 element.style.animationPlayState = 'running';
             });
 
+            santa.style.visibility = "visible";
+            santa.style.animationPlayState = 'running';
+
+
             fourSeasonTree.style.display = "none";
 
         } else {
@@ -247,14 +255,6 @@
                     element.classList.remove('about');
                 }, 50);
             });
-
-            aboutNo.forEach(function (element) {
-                // element.style.animationPlayState = "running";
-                setTimeout(() => {
-                    element.classList.add('aboutNo');
-                }, 50);
-            });
-
 
             seasonTrees.forEach(function (element) {
                 element.style.visibility = "hidden";
@@ -270,6 +270,9 @@
                 element.style.visibility = "hidden";
                 element.style.animationPlayState = "paused";
             });
+
+            santa.style.visibility = "hidden";
+            santa.style.animationPlayState = "paused";
 
             fourSeasonTree.style.display = "block";
         }
