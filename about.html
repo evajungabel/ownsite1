@@ -215,9 +215,7 @@
 
             about.forEach(function (element) {
                 element.style.animationPlayState = "running";
-                setTimeout(() => {
-                    element.classList.add('about');
-                }, 50);
+                element.classList.add('about');
             });
 
             seasonTrees.forEach(function (element) {
@@ -248,9 +246,7 @@
 
             about.forEach(function (element) {
                 element.style.animationPlayState = "paused";
-                setTimeout(() => {
-                    element.classList.remove('about');
-                }, 50);
+                element.classList.remove('about');
             });
 
             seasonTrees.forEach(function (element) {

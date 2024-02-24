@@ -6,6 +6,9 @@ audio {
 }
 
 body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -280,11 +283,13 @@ div.section {
     animation-delay: 39s;
 }
 
+
+
 .modal-content, .modal-contentW {
     mix-blend-mode: multiply;
     visibility: hidden;
     position: absolute;
-    width: 10vw;
+    max-width: 10%;
     animation: fall 51s infinite forwards;
     animation-iteration-count: infinite;
     animation-play-state: paused;
@@ -292,11 +297,16 @@ div.section {
 }
 
 @keyframes fall {
-    10% {
+    0% {
+        top: 0;
+    }
+    1% {
         opacity: 1;
     }
     25% {
-        transform: translateY(100vmin);
+        bottom: 0;
+    }
+    40% {
         opacity: 0;
     }
 }
@@ -377,7 +387,7 @@ div.section {
     mix-blend-mode: multiply;
     visibility: hidden;
     position: absolute;
-    width: 10vw;
+    width: 20%;
     animation: movingSanta 51s infinite ease-in-out forwards;;
     animation-delay: 40s;
     transform: translateY(50%);
@@ -390,7 +400,7 @@ div.section {
         opacity: 1;
     }
     25% {
-        transform: translateX(100vmin);
+        transform: translateX(100%);
         opacity: 0;
     }
 }
