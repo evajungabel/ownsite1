@@ -297,16 +297,11 @@ div.section {
 }
 
 @keyframes fall {
-    0% {
-        top: 0;
-    }
-    1% {
+    10% {
         opacity: 1;
     }
     25% {
-        bottom: 0;
-    }
-    40% {
+        transform: translateY(100vmin);
         opacity: 0;
     }
 }
