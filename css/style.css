@@ -9,7 +9,7 @@ body {
 
 header, nav, main, footer {
     display: flex;
-    margin: 20px;
+    margin: 15px;
     text-decoration: none;
     text-align: justify;
 }
@@ -80,7 +80,6 @@ footer {
     justify-content: center;
     background-color: #0F1035;
     color: white;
-    padding: 5px;
     clear: both;
 }
 

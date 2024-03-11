@@ -37,6 +37,36 @@
     <img class="autumn" id="autumn7" src="./assets/autumn/a7.png" alt="flying leaf"/>
 </div>
 
+<img class="cherryFlower" id="cherryFlower1" src="./assets/cherryFlowers/cherryFlower1.jpg" alt="cherry flower"/>
+<img class="cherryFlower" id="cherryFlower2" src="./assets/cherryFlowers/cherryFlower2.jpg" alt="cherry flower"/>
+<img class="cherryFlower" id="cherryFlower3" src="./assets/cherryFlowers/cherryFlower3.jpg" alt="cherry flower"/>
+<img class="cherryFlower" id="cherryFlower4" src="./assets/cherryFlowers/cherryFlower4.jpg" alt="cherry flower"/>
+<img class="cherryFlower" id="cherryFlower5" src="./assets/cherryFlowers/cherryFlower5.jpg" alt="cherry flower"/>
+<img class="cherryFlower" id="cherryFlower6" src="./assets/cherryFlowers/cherryFlower6.jpg" alt="cherry flower"/>
+<img class="cherryFlower" id="cherryFlower7" src="./assets/cherryFlowers/cherryFlower7.jpg" alt="cherry flower"/>
+<img class="cherryFlower" id="cherryFlower8" src="./assets/cherryFlowers/cherryFlower8.jpg" alt="cherry flower"/>
+<img class="cherryFlower" id="cherryFlower9" src="./assets/cherryFlowers/cherryFlower9.jpg" alt="cherry flower"/>
+
+<img class="modal-contentCF" id="imgCF1" alt="cherry flower">
+<img class="modal-contentCF" id="imgCF2" alt="cherry flower">
+<img class="modal-contentCF" id="imgCF3" alt="cherry flower">
+<img class="modal-contentCF" id="imgCF4" alt="cherry flower">
+<img class="modal-contentCF" id="imgCF5" alt="cherry flower">
+<img class="modal-contentCF" id="imgCF6" alt="cherry flower">
+<img class="modal-contentCF" id="imgCF7" alt="cherry flower">
+<img class="modal-contentCF" id="imgCF8" alt="cherry flower">
+<img class="modal-contentCF" id="imgCF9" alt="cherry flower">
+
+<img class="summerFruit" id="summerFruit1" src="./assets/summerFruits/sourCherry.jpg" alt="sour cherry"/>
+<img class="summerFruit" id="summerFruit2" src="./assets/summerFruits/apple.jpg" alt="apple"/>
+<img class="summerFruit" id="summerFruit3" src="./assets/summerFruits/appleGreen.jpg" alt="green apple"/>
+<img class="summerFruit" id="summerFruit4" src="./assets/summerFruits/pear.jpg" alt="pear"/>
+
+<img class="modal-contentSF" id="imgSF1" alt="sour cherry">
+<img class="modal-contentSF" id="imgSF2" alt="apple">
+<img class="modal-contentSF" id="imgSF3" alt="green apple">
+<img class="modal-contentSF" id="imgSF4" alt="pear">
+
 
 <img class="modal-content" id="img1" alt="autumn leaves">
 <img class="modal-content" id="img2" alt="autumn leaves">
@@ -113,7 +143,6 @@
             <img class="modal-trees" id="tree3" alt="autumn tree">
             <img class="modal-trees" id="tree4" alt="winter tree">
 
-
         </div>
         <div class="section">
             <h2 class="about aboutNo">Experiences</h2>
@@ -152,12 +181,9 @@
     const icon = document.querySelector("#button > i");
     let music = document.querySelector("#mixSeasons");
     let about = document.querySelectorAll('.about');
-    let aboutNo = document.querySelectorAll('.aboutNo');
 
     let fourSeasonTree = document.getElementById("fourSeasonTree");
     let seasonTrees = document.querySelectorAll(".modal-trees");
-
-    let fallingLeaves = document.querySelectorAll('.modal-content');
 
     let tree1 = document.getElementById("tree1");
     let tree2 = document.getElementById("tree2");
@@ -167,8 +193,43 @@
     tree2.src = document.getElementById("seasonTree2").src;
     tree3.src = document.getElementById("seasonTree3").src;
     tree4.src = document.getElementById("seasonTree4").src;
-
     let img1 = document.getElementById("img1");
+
+    let cherryFlowers = document.querySelectorAll('.modal-contentCF');
+
+    let imgCF1 = document.getElementById("imgCF1");
+    let imgCF2 = document.getElementById("imgCF2");
+    let imgCF3 = document.getElementById("imgCF3");
+    let imgCF4 = document.getElementById("imgCF4");
+    let imgCF5 = document.getElementById("imgCF5");
+    let imgCF6 = document.getElementById("imgCF6");
+    let imgCF7 = document.getElementById("imgCF7");
+    let imgCF8 = document.getElementById("imgCF8");
+    let imgCF9 = document.getElementById("imgCF9");
+    imgCF1.src = document.getElementById("cherryFlower1").src;
+    imgCF2.src = document.getElementById("cherryFlower2").src;
+    imgCF3.src = document.getElementById("cherryFlower3").src;
+    imgCF4.src = document.getElementById("cherryFlower4").src;
+    imgCF5.src = document.getElementById("cherryFlower5").src;
+    imgCF6.src = document.getElementById("cherryFlower6").src;
+    imgCF7.src = document.getElementById("cherryFlower7").src;
+    imgCF8.src = document.getElementById("cherryFlower8").src;
+    imgCF9.src = document.getElementById("cherryFlower9").src;
+
+
+    let summerFruits = document.querySelectorAll('.modal-contentSF');
+
+    let imgSF1 = document.getElementById("imgSF1");
+    let imgSF2 = document.getElementById("imgSF2");
+    let imgSF3 = document.getElementById("imgSF3");
+    let imgSF4 = document.getElementById("imgSF4");
+    imgSF1.src = document.getElementById("summerFruit1").src;
+    imgSF2.src = document.getElementById("summerFruit2").src;
+    imgSF3.src = document.getElementById("summerFruit3").src;
+    imgSF4.src = document.getElementById("summerFruit4").src;
+
+    let fallingLeaves = document.querySelectorAll('.modal-content');
+
     let img2 = document.getElementById("img2");
     let img3 = document.getElementById("img3");
     let img4 = document.getElementById("img4");
@@ -223,6 +284,16 @@
                 element.style.animationPlayState = 'running';
             });
 
+            cherryFlowers.forEach(function (element) {
+                element.style.visibility = "visible";
+                element.style.animationPlayState = 'running';
+            });
+
+            summerFruits.forEach(function (element) {
+                element.style.visibility = "visible";
+                element.style.animationPlayState = 'running';
+            });
+
             fallingLeaves.forEach(function (element) {
                 element.style.visibility = "visible";
                 element.style.animationPlayState = 'running';
@@ -250,6 +321,16 @@
             });
 
             seasonTrees.forEach(function (element) {
+                element.style.visibility = "hidden";
+                element.style.animationPlayState = "paused";
+            });
+
+            cherryFlowers.forEach(function (element) {
+                element.style.visibility = "hidden";
+                element.style.animationPlayState = "paused";
+            });
+
+            summerFruits.forEach(function (element) {
                 element.style.visibility = "hidden";
                 element.style.animationPlayState = "paused";
             });
